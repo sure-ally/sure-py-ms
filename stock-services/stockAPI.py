@@ -6,7 +6,7 @@ def getStockDetails(symbol = 'MSFT'):
     conn = http.client.HTTPSConnection("alpha-vantage.p.rapidapi.com")
 
     headers = {
-        'x-rapidapi-key': "06e3da3baamsh224d62b09ac230bp1aba63jsn50b29b801fa8",
+        'x-rapidapi-key': "abc123",
         'x-rapidapi-host': "alpha-vantage.p.rapidapi.com"
     }
 
