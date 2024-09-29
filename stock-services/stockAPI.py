@@ -6,7 +6,7 @@ def getStockDetails(symbol = 'MSFT'):
     conn = http.client.HTTPSConnection("alpha-vantage.p.rapidapi.com")
 
     headers = {
-        'x-rapidapi-key': "abc123",
+        'x-rapidapi-key': "abc123", # Get it from rapidAPI
         'x-rapidapi-host': "alpha-vantage.p.rapidapi.com"
     }
 
@@ -26,6 +26,13 @@ def getStockDetails(symbol = 'MSFT'):
 # companies = [{"id": 1, "name": "Company One"}, {"id": 2, "name": "Company Two"}]
 
 api = Flask(__name__)
+
+@api.route('/health', methods=['GET'])
+def healthCheck():
+    print("Health passed")
+    return 'OK', 200  # This will return with a 200 status code
+    # If any check fails:
+    # return 'ERROR', 500 
 
 @api.route('/stock/<symbol>', methods=['GET'])
 def getStock(symbol):
