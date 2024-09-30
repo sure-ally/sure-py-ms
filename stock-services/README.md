@@ -29,3 +29,8 @@ Test http://127.0.0.1:5000/stock/NVDA
 
 sure-ally\sure-py-ms\stock-services> docker tag sure-py-stock-services:latest ysurendrak/sure-py-stock-services:latest  
 sure-ally\sure-py-ms\stock-services> docker push ysurendrak/sure-py-stock-services:latest    
+
+-- To update docker image
+sure-ally\sure-py-ms\stock-services> docker build -t sure-py-stock-services .
+sure-ally\sure-py-ms\stock-services> docker tag sure-py-stock-services:latest ysurendrak/sure-py-stock-services:latest
+sure-ally\sure-py-ms\stock-services> docker push ysurendrak/sure-py-stock-services:latest  
